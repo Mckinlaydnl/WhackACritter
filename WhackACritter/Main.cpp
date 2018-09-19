@@ -1,4 +1,9 @@
 #include <SFML/Graphics.hpp>
+
+//project includes
+#include "Critter.h"
+
+
 int main()
 {
 	// Make a variable called gameWindow of type RenderWindow
@@ -7,6 +12,8 @@ int main()
 		sf::Style::Titlebar | sf::Style::Close);
 	sf::Clock gameClock;
 
+	//Create an instance of our critter class
+	Critter myCritter;
 
 	while (gameWindow.isOpen())
 	{
@@ -32,6 +39,7 @@ int main()
 		gameWindow.clear();
 
 		//draw everything
+		myCritter.Draw(gameWindow);
 
 		//display the windows contents to the screen
 		gameWindow.display();
